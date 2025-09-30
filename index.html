@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>StimaOne — Kenya's Power Rescue & Savings Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <!-- Logo image -->
+      <a href="index.html" class="logo">
+  <img src="images/logo.png" alt="StimaOne Logo" style="height:80px;vertical-align:middle;">
+  <span>StimaOne</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <h1>Know outages. Cut bills. Get trusted fundis & solar quotes.</h1>
+          <p class="lead">StimaOne combines smart bill analysis, outage alerts, vetted electricians and solar leads — all in one simple platform. Launch your savings today.</p>
+
+          <form id="quick-bill-form" class="card form-card" aria-label="Upload bill">
+            <h3>Quick Bill Analyzer (Free)</h3>
+            <label for="last-amount">Last bill amount (KES)</label>
+            <input id="last-amount" name="lastAmount" type="number" min="1" placeholder="e.g., 1800" required>
+            <label for="period-days">Number of days that bill covered</label>
+            <input id="period-days" name="periodDays" type="number" min="1" placeholder="e.g., 30" required>
+            <div class="form-row">
+              <button type="submit" class="btn primary">Analyze Now (Free)</button>
+              <button id="buy-premium" type="button" class="btn alt">Buy Premium Report (KES 300)</button>
+            </div>
+            <div id="quick-bill-result" class="bill-result" aria-live="polite" hidden></div>
+          </form>
+        </div>
+
+        <div class="hero-visual">
+          <div class="slider" id="image-slider" aria-roledescription="carousel">
+            <div class="slide active">
+              <img src="images/slider1.jpg" alt="solar panels on roof"/>
+              <div class="slide-caption">Save energy • Save money</div>
+            </div>
+            <div class="slide">
+              <img src="images/slider2.jpg" alt="electrician working"/>
+              <div class="slide-caption">Trusted electricians near you</div>
+            </div>
+            <div class="slide">
+              <img src="images/slider3.jpg" alt="battery storage"/>
+              <div class="slide-caption">Backup when you need it</div>
+            </div>
+            <button id="prev-slide" class="slider-btn prev" aria-label="Previous">‹</button>
+            <button id="next-slide" class="slider-btn next" aria-label="Next">›</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container features">
+      <h2>How StimaOne helps</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>AI Bill Analyzer</h3>
+          <p>Upload or type your KPLC bill details to get a quick free analysis and recommendations to lower costs.</p>
+        </article>
+        <article class="card">
+          <h3>Outage Alerts</h3>
+          <p>Localized outage calendar and SMS/WhatsApp alerts — never be caught off-guard again.</p>
+        </article>
+        <article class="card">
+          <h3>Verified Fundis</h3>
+          <p>Book rated electricians & technicians in your neighborhood — fast response & secure payments.</p>
+        </article>
+        <article class="card">
+          <h3>Solar Lead Marketplace</h3>
+          <p>Get quotes from pre-vetted solar installers and compare affordable packages.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="container steps">
+      <h2>Start saving in 3 steps</h2>
+      <ol class="steps-list">
+        <li><strong>Analyze:</strong> Upload your bill for a free quick analysis.</li>
+        <li><strong>Act:</strong> Book a fundi or buy a premium report for deeper insights.</li>
+        <li><strong>Save:</strong> Apply recommendations, reduce bills and earn Green Points.</li>
+      </ol>
+    </section>
+
+    <section class="container testimonials">
+      <h2>Trusted by Kenyans</h2>
+      <div class="grid">
+        <blockquote class="card">
+          "Saved KES 1,200 by following the quick tips — the premium report was worth every shilling."<cite>— Anna, Nairobi</cite>
+        </blockquote>
+        <blockquote class="card">
+          "Booked a fundi through StimaOne and the fix was done in 2 hours. Reliable!"<cite>— Joseph, Kiambu</cite>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a href="index.html" class="logo small">
+          <img src="images/logo.png" alt="StimaOne Logo Small" style="height:30px;vertical-align:middle;">
+          <span>StimaOne</span>
+        </a>
+        <p>One-stop energy platform for households and small businesses in Kenya.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="services.html">Services</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <p>Email: stimaone25@gmail.com</p>
+        <p>Phone: +254 758891508</p>
+      </div>
+    </div>
+    <div class="container copyright">© <span id="year"></span> 2025 StimaOne. All rights reserved.</div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
